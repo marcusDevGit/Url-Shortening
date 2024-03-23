@@ -42,3 +42,17 @@ li {
 a {
   text-decoration: none;
 }
+button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+  background-color: var(--Cyan);
+}
+
+button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}

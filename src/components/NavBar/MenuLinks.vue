@@ -17,6 +17,5 @@ a{
 }
 a:hover{
     color: var(--darkviolet);
-    cursor: pointer;
 }
 </style>
