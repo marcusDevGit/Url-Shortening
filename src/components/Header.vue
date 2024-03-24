@@ -5,9 +5,9 @@
             <MenuLinks/>
             <BtnSection/>
         </section>
-        <section class="toogle_menu" @click="toogleMenu">  
-            <i class="pi pi-barras" v-if="!menuState"></i>
-            <i class="pi pi-arrow-right" v-else></i>
+        <section class="toogler_menu" @click="toogleMenu">  
+            <i class="fa-solid fa-bars" v-if="!menuState"></i>
+            <i class="fa-solid fa-right-to-bracket"v-else></i>
         </section>
 
     </nav>
@@ -21,6 +21,7 @@ import BtnSection from './NavBar/BtnSection.vue';
 const menuState = ref(false);
 
 const toogleMenu = () => {
+    console.log('toogle menu foi chamando');
     menuState.value = !menuState.value;
     const menuNav = document.querySelector('.menu');
     menuNav.classList.toggle('show');
@@ -53,5 +54,20 @@ nav {
 }
 .toogle_menu {
     z-index: 3;
+}
+
+@media (max-width: 768px) {
+    .menu{
+        display: none;
+        position: absolute;
+        background-color: var(--darkviolet);
+        height: 80vh;
+    }
+    .pi{
+        display: block;
+    }
+    .show{
+        display: block;
+    }
 }
 </style>

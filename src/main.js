@@ -1,8 +1,8 @@
 import { createApp } from 'vue'
 import './style.css'
-import PrimeVue from 'primevue/config'
+import '@fortawesome/fontawesome-free/css/all.css'
 import App from './App.vue'
 
+
 const app = createApp(App)
-app.use(PrimeVue)
 app.mount('#app')

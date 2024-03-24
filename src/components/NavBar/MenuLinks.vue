@@ -18,4 +18,12 @@ a{
 a:hover{
     color: var(--darkviolet);
 }
+@media (max-width: 768px) {
+		.menu_links {
+			position: relative;
+			top: 100px;
+			flex-direction: column;
+			gap: 3rem;
+		}
+	}
 </style>
