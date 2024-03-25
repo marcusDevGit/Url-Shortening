@@ -2,12 +2,13 @@
     <nav class="nav_container">
         <a href="/" class="img_logo"><img src="/src/assets/images/logo.svg" alt="shortly image logo"></a>
         <section class="menu">
-            <MenuLinks/>
-            <BtnSection/>
+            <MenuLinks />
+            <div class="divider"></div>
+            <BtnSection />
         </section>
-        <section class="toogler_menu" @click="toogleMenu">  
-            <i class="fa-solid fa-bars" v-if="!menuState"></i>
-            <i class="fa-solid fa-right-to-bracket"v-else></i>
+        <section class="toogler_menu" @click="toogleMenu">
+            <i class="fa-sharp fa-solid fa-bars fa-2xl"></i>
+            <!-- <i class="fa-solid fa-right-to-bracket fa-2xl"v-else></i> -->
         </section>
 
     </nav>
@@ -21,7 +22,6 @@ import BtnSection from './NavBar/BtnSection.vue';
 const menuState = ref(false);
 
 const toogleMenu = () => {
-    console.log('toogle menu foi chamando');
     menuState.value = !menuState.value;
     const menuNav = document.querySelector('.menu');
     menuNav.classList.toggle('show');
@@ -48,26 +48,47 @@ nav {
 .img_logo {
     position: relative;
 }
-.pi{
+
+.fa-solid {
     color: var(--gray);
     display: none;
 }
-.toogle_menu {
+
+.toogler_menu {
     z-index: 3;
 }
 
 @media (max-width: 768px) {
-    .menu{
+    nav {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .menu {
         display: none;
-        position: absolute;
-        background-color: var(--darkviolet);
-        height: 80vh;
+        background-color: var(--darkViolet);
+        height: 62vh;
+        margin: 50px -22px 0 -110px;
+        border-radius: 20px;
     }
-    .pi{
+
+    .fa-solid {
         display: block;
     }
-    .show{
+
+    .show {
         display: block;
+    }
+
+    .divider {
+        position: relative;
+        top: 25px;
+        border: 1px solid var(--gray);
+        width: 90%;
+        margin: 0 1rem;
+    }
+    btnsection {
+        width: 80%;
     }
 }
 </style>

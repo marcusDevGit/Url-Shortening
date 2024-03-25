@@ -5,25 +5,34 @@
         <li><a href="#">Resources</a></li>
     </ul>
 </template>
-<style scoped>
+<style>
 .menu_links{
     display: flex;
     justify-content: flex-start;
+    margin-left: 10px;
     gap: 3rem;
 }
 a{
-    color: var(--grayishviolet);
+    color: var(--grayishViolet);
     font-weight: 700;
 }
 a:hover{
-    color: var(--darkviolet);
+    color: var(--darkViolet);
 }
 @media (max-width: 768px) {
 		.menu_links {
+            display: flex;
 			position: relative;
-			top: 100px;
+			margin-top: 40px;
+            padding: 0;
 			flex-direction: column;
-			gap: 3rem;
+			align-items: center;
 		}
+        a{
+            color: var(--white);
+        }
+        a:hover{
+            color: var(--white);
+        }
 	}
 </style>

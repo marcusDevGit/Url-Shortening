@@ -1,5 +1,7 @@
 <template>
-    <button :class="[roud && 'roud', transparent && 'transparent']" :disabled="isload && 'disabled'">
+    <button 
+    :class="[round && 'round', transparent && 'transparent']" 
+    :disabled="isload && 'disabled'">
 
         <span v-if="isload">
             <i class="fa-solid fa-circle-notch fa-rotate-90"></i>
@@ -10,17 +12,17 @@
     </button>
 </template>
 <script setup>
-const { text, transparent, isload, roud } = defineProps([
+const { text, transparent, isload, round } = defineProps([
     'text',
     'transparent',
     'isload',
-    'roud'
+    'round',
 ]);
 </script>
 <style scoped>
 .transparent {
     background-color: transparent;
-    color: var(--darkviolet);
+    color: var(--grayishViolet);
 }
 .round {
     border-radius: 35px;
@@ -28,5 +30,16 @@ const { text, transparent, isload, roud } = defineProps([
 .fa-circle-notch{
     
     color: var(--veryDarkBlue);
+}
+@media (max-width: 768px) {
+    .round{
+        width: 85%;
+        padding: 13px;
+    }
+    .transparent{
+        background-color: var(--darkViolet);
+        color: var(--white);
+    }
+
 }
 </style>
