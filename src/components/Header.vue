@@ -32,7 +32,7 @@ const toogleMenu = () => {
 /* Your component's CSS styles go here */
 nav {
     display: flex;
-    padding: 30px;
+    padding: 35px 80px;
     align-items: center;
     justify-content: space-between;
     position: relative;

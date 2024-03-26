@@ -1,9 +1,10 @@
 <script setup>
-import { Header } from './components/';
+import { Header, Banner } from './components/';
 </script>
 
 <template>
     <Header />
+    <Banner />
 </template>
 
 <style scoped>

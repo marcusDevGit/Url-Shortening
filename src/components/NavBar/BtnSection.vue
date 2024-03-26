@@ -13,12 +13,14 @@ import BtnComponet from '../UiParts/BtnComponet.vue';
         display: flex;
         gap: 1rem;
     }
+    
     @media (max-width: 768px) {
         .sing-in{
             top: 50px;
             flex-direction: column;
             align-items: center;;
         }
+
 
     }
 </style>

@@ -24,6 +24,7 @@ const { text, transparent, isload, round } = defineProps([
     background-color: transparent;
     color: var(--grayishViolet);
 }
+
 .round {
     border-radius: 35px;
 }
@@ -31,6 +32,8 @@ const { text, transparent, isload, round } = defineProps([
     
     color: var(--veryDarkBlue);
 }
+  
+
 @media (max-width: 768px) {
     .round{
         width: 85%;
@@ -40,6 +43,6 @@ const { text, transparent, isload, round } = defineProps([
         background-color: var(--darkViolet);
         color: var(--white);
     }
-
+      
 }
 </style>

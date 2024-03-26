@@ -1,6 +1,6 @@
 :root {
   --Cyan: hsl(180, 66%, 49%);
-  --darkViolet: hsl(257, 27%, 26%);
+  --darkViolet: #3b3054;
   --red: hsl(0, 87%, 67%);
   --gray: hsl(0, 0%, 75%);
   --grayishViolet: hsl(257, 7%, 63%);
