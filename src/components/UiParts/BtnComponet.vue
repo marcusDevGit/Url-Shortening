@@ -2,7 +2,6 @@
     <button 
     :class="[round && 'round', transparent && 'transparent']" 
     :disabled="isload && 'disabled'">
-
         <span v-if="isload">
             <i class="fa-solid fa-circle-notch fa-rotate-90"></i>
         </span>
@@ -10,6 +9,7 @@
             {{ text }}
         </span>
     </button>
+    
 </template>
 <script setup>
 const { text, transparent, isload, round } = defineProps([
@@ -17,6 +17,10 @@ const { text, transparent, isload, round } = defineProps([
     'transparent',
     'isload',
     'round',
+/**
+ * This code is located in the file BtnComponet.vue.
+ * It is an array closing bracket.
+ */
 ]);
 </script>
 <style scoped>

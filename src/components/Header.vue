@@ -3,26 +3,23 @@
         <a href="/" class="img_logo"><img src="/src/assets/images/logo.svg" alt="shortly image logo"></a>
         <section class="menu">
             <MenuLinks />
-            <div class="divider"></div>
+            <div class="divider"></div><!-- This div element represents a horizontal divider in the header component. -->
             <BtnSection />
         </section>
-        <section class="toogler_menu" @click="toogleMenu">
-            <i class="fa-sharp fa-solid fa-bars fa-2xl"></i>
-            <!-- <i class="fa-solid fa-right-to-bracket fa-2xl"v-else></i> -->
-        </section>
 
+        <section class="toogler_menu" @click="toggleMenu">
+            <i class="fa-sharp fa-solid fa-bars fa-2xl"></i>
+        </section>
     </nav>
 </template>
 
 <script setup>
-import { ref } from '@vue/reactivity';
 import MenuLinks from './NavBar/MenuLinks.vue';
 import BtnSection from './NavBar/BtnSection.vue';
 
-const menuState = ref(false);
 
-const toogleMenu = () => {
-    menuState.value = !menuState.value;
+/**Toggles the visibility of the menu navigation. */
+const toggleMenu = () => {
     const menuNav = document.querySelector('.menu');
     menuNav.classList.toggle('show');
 }
@@ -32,7 +29,7 @@ const toogleMenu = () => {
 /* Your component's CSS styles go here */
 nav {
     display: flex;
-    padding: 35px 80px;
+    padding: 35px 100px;
     align-items: center;
     justify-content: space-between;
     position: relative;
@@ -55,7 +52,8 @@ nav {
 }
 
 .toogler_menu {
-    z-index: 3;
+    position: relative;
+    z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -76,8 +74,9 @@ nav {
         display: block;
     }
 
-    .show {
+    .menu.show {
         display: block;
+
     }
 
     .divider {
@@ -87,6 +86,7 @@ nav {
         width: 90%;
         margin: 0 1rem;
     }
+
     btnsection {
         width: 80%;
     }
