@@ -1,11 +1,11 @@
 <template>
     <section class=" sing-in">
-        <BtnComponet text="Login" :transparent="true" />
-        <BtnComponet text="Sign Up" :round="true" />
+        <BtnComponent text="Login" :transparent="true" />
+        <BtnComponent text="Sign Up" :round="true" />
     </section>
 </template>
 <script setup>
-import BtnComponet from '../UiParts/BtnComponet.vue';
+import BtnComponent from '../UiParts/BtnComponent.vue';
 </script>
 <style scoped>
     .sing-in {

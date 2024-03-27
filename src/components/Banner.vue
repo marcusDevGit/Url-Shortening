@@ -6,7 +6,7 @@
                 Build your brand’s recognition and get detailed insights on how your
                 links are performing.
             </p>
-            <BtnComponet text="Get Started" :round="true" />
+            <BtnComponent text="Get Started" :round="true" />
         </section>
         <section class="img-banner">
             <img src="/src/assets/images/illustration-working.svg" alt="image illustration working shortly">
@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import BtnComponet from './UiParts/BtnComponet.vue';
+import BtnComponent from './UiParts/BtnComponent.vue';
 </script>
 
 <style scoped>

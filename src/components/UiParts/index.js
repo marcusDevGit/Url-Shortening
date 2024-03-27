@@ -1,1 +1,2 @@
-export { default as BtnComponent } from './BtnComponent';
+export { default as BtnComponent } from './BtnComponent.vue';
+export { default as UrlShort} from './UrlShort.vue';
