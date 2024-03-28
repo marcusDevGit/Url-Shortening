@@ -14,7 +14,7 @@
 
             </section>
         </form>
-        <section class="url-short-list" v-if="shortenedUrl > 0">
+        <section class="url-short-list" v-if="shortenedUrl.length > 0">
             <UrlShort v-for="(shortLink, index) in shortenedUrl" 
             :key="index"
             :shortLink="shortLink"/>
@@ -26,8 +26,12 @@
 <script setup>
 import { BtnComponent, UrlShort } from './UiParts'
 import FetchApi from '../components/Hooks/FetchApi';
+import { toRaw } from 'vue';
 
 const { formStatus, clickShortens, shortenedUrl, isload } = FetchApi();
+
+    console.log('shortenedUrl no form.vue', toRaw(shortenedUrl))
+
 </script>
 
 <style scoped>
@@ -41,6 +45,7 @@ const { formStatus, clickShortens, shortenedUrl, isload } = FetchApi();
     position: relative;
     padding: 60px 40px;
     background: url('/src/assets/images/bg-shorten-desktop.svg') no-repeat center/cover var(--veryDarkViolet);
+    border-radius: 10px;
     top: 100px;
     z-index: 1;
     margin: 0 auto;
@@ -67,7 +72,7 @@ const { formStatus, clickShortens, shortenedUrl, isload } = FetchApi();
     font-size: 1.1rem;
  }
  .url-short-list {
-    display: flex;
+    position: relative;
     top: 100px;
     width: 80%;
  }
